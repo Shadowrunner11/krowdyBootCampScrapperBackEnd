@@ -1,4 +1,4 @@
-import {} from 'dotenv/config'
+//import {} from 'dotenv/config'
 import fastify from 'fastify'
 import { Person } from './schema/Person.js';
 import { main } from './services/conexion.js';
