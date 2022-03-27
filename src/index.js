@@ -6,7 +6,7 @@ import { main } from './services/conexion.js';
 const fast = fastify({logger:true})
 
 
-fast.get('/', async (request, reply) => {
+fast.get('/app', async (request, reply) => {
   return { hello: 'worldsasdasas' }
 })
 
