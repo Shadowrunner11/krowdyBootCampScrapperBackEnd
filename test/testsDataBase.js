@@ -9,7 +9,6 @@ describe('Testeamos la base de datos', ()=>{
             fullName: "John Doe",
             education: [{institution:"Krowdy Academy", description:"Full Stack bootcamp"}]
         })
-        console.log(response)
         response.status.should.equal(200)
     })
 })
