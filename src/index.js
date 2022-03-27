@@ -21,6 +21,7 @@ fast.post('/api',async (request, reply)=> {
 })
 
 const start = async () => {
+  console.log(process.env)
   try {
     await fast.listen(process.env.PORT)
   } catch (err) {
