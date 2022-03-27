@@ -1,4 +1,3 @@
-import {} from 'dotenv/config'
 import mongoose from 'mongoose'
 import { ACCES_MONGO } from '../../config/envs.js'
 

@@ -1,3 +1,4 @@
+import {} from 'dotenv/config'
 import fastify from 'fastify'
 import { Person } from './schema/Person.js';
 import { main } from './services/conexion.js';
@@ -21,7 +22,7 @@ fast.post('/api',async (request, reply)=> {
 
 const start = async () => {
   try {
-    await fast.listen(3000)
+    await fast.listen(process.env.PORT)
   } catch (err) {
     fast.log.error(err)
     process.exit(1)
