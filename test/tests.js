@@ -1,8 +1,11 @@
 import puppeteer from 'puppeteer';
-import { BROWSER_OPTIONS_DEV, TAB_WAIT_2_REQUESTS } from '../config/envs.js';
-import { EMAIL, PASSWORD } from '../config/secrets.js';
+//import { BROWSER_OPTIONS_DEV, TAB_WAIT_2_REQUESTS } from '../config/envs.js';
+//import { EMAIL, PASSWORD } from '../config/secrets.js';
 import chai from 'chai';
-
+const {EMAIL, PASSWORD} = process.env
+const BROWSER_OPTIONS_DEV = { headless: true};
+const BROWSER_OPTIONS_DEV2 = { headless: false };
+const TAB_WAIT_2_REQUESTS = {waitUntil: 'networkidle2'}
 
 const browserOptions = BROWSER_OPTIONS_DEV
 const pageOptions = TAB_WAIT_2_REQUESTS
