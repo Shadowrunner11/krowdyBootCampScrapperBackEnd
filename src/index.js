@@ -5,7 +5,7 @@ import { main } from './services/conexion.js';
 
 const fast = fastify({logger:true})
 
-main().catch(err => console.log(err));
+
 
 
 
@@ -14,9 +14,11 @@ fast.get('/', async (request, reply) => {
 })
 
 fast.post('/api',async (request, reply)=> {
+  const conn = main()
   const {fullName,education} = request.body
   const person = new Person ({fullName, education})
   await person.save()
+  await conn.close()
   return person
  
 })
